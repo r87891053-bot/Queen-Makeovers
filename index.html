@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Queen Makeovers | Makeup Artist</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#fff8fb;
+  color:#333;
+}
+
+header{
+  background:linear-gradient(135deg,#8e245d,#d84d91);
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+header h1{
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+header p{
+  font-size:18px;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  margin-bottom:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.rating{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+.stars{
+  color:#f5b400;
+  font-size:25px;
+}
+
+h2{
+  color:#8e245d;
+  margin-bottom:15px;
+}
+
+.info{
+  line-height:1.8;
+  font-size:16px;
+}
+
+.service{
+  display:flex;
+  justify-content:space-between;
+  padding:13px 0;
+  border-bottom:1px solid #eee;
+}
+
+.service:last-child{
+  border-bottom:none;
+}
+
+.price{
+  font-weight:bold;
+  color:#8e245d;
+}
+
+.btn{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  padding:15px;
+  border-radius:30px;
+  margin-top:12px;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+}
+
+.call{
+  background:#087f8c;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.map{
+  background:#555;
+}
+
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:14px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+}
+
+form button{
+  width:100%;
+  border:0;
+  padding:15px;
+  background:#8e245d;
+  color:white;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+footer{
+  background:#8e245d;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:20px;
+}
+
+.badge{
+  display:inline-block;
+  background:#fff;
+  color:#8e245d;
+  padding:8px 15px;
+  border-radius:20px;
+  margin-top:15px;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Queen Makeovers</h1>
+  <p>क्वीन मेकओवर्स</p>
+  <div class="badge">💄 Professional Makeup Artist</div>
+</header>
+
+<div class="container">
+
+  <!-- Rating -->
+  <div class="card rating">
+    <div class="stars">★★★★★</div>
+    <strong>4.8</strong> / 5
+    <br>
+    <small>50 Customer Reviews</small>
+  </div>
+
+  <!-- About -->
+  <div class="card">
+    <h2>About Queen Makeovers</h2>
+
+    <div class="info">
+      💄 Professional Makeup Artist<br>
+      👑 Bridal & Party Makeup<br>
+      ✨ Beauty Makeover Services<br>
+      💕 Quality Service
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="card">
+    <h2>Our Services</h2>
+
+    <div class="service">
+      <span>Bridal Makeup</span>
+      <span class="price">Contact</span>
+    </div>
+
+    <div class="service">
+      <span>Party Makeup</span>
+      <span class="price">Contact</span>
+    </div>
+
+    <div class="service">
+      <span>Engagement Makeup</span>
+      <span class="price">Contact</span>
+    </div>
+
+    <div class="service">
+      <span>Hair Styling</span>
+      <span class="price">Contact</span>
+    </div>
+
+    <div class="service">
+      <span>Complete Makeover</span>
+      <span class="price">Contact</span>
+    </div>
+  </div>
+
+  <!-- Address -->
+  <div class="card">
+    <h2>📍 Our Location</h2>
+
+    <div class="info">
+      Ward No. 23, Gola Rd,<br>
+      In Front of Atom Club,<br>
+      Bangali Tola,<br>
+      Samastipur, Bihar<br>
+      <strong>PIN - 848101</strong>
+    </div>
+
+    <a class="btn map"
+       href="https://www.google.com/maps/search/?api=1&query=Queen+Makeovers+Samastipur+Bihar"
+       target="_blank">
+       📍 Open in Google Maps
+    </a>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <h2>📞 Contact Us</h2>
+
+    <a class="btn call"
+       href="tel:07070970295">
+       📞 Call Now
+    </a>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/917070970295?text=Hello%20Queen%20Makeovers%2C%20mujhe%20makeup%20booking%20ke%20baare%20mein%20jaankari%20chahiye."
+       target="_blank">
+       💬 WhatsApp
+    </a>
+  </div>
+
+  <!-- Booking -->
+  <div class="card">
+    <h2>📅 Book Appointment</h2>
+
+    <form onsubmit="bookAppointment(event)">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Mobile Number"
+        required>
+
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Bridal Makeup</option>
+        <option>Party Makeup</option>
+        <option>Engagement Makeup</option>
+        <option>Hair Styling</option>
+        <option>Complete Makeover</option>
+      </select>
+
+      <input
+        type="date"
+        id="date"
+        required>
+
+      <textarea
+        id="message"
+        rows="4"
+        placeholder="Any special requirement"></textarea>
+
+      <button type="submit">
+        Book Appointment
+      </button>
+
+    </form>
+  </div>
+
+  <!-- Timing -->
+  <div class="card">
+    <h2>🕐 Business Hours</h2>
+
+    <div class="info">
+      <strong>Today:</strong>
+      <span style="color:green;"> Open</span><br>
+      Closes at <strong>8:30 PM</strong>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Queen Makeovers</strong>
+  <br><br>
+  Professional Makeup & Beauty Services
+  <br><br>
+  © 2026 Queen Makeovers
+</footer>
+
+<script>
+
+function bookAppointment(event){
+
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let service = document.getElementById("service").value;
+  let date = document.getElementById("date").value;
+  let message = document.getElementById("message").value;
+
+  let text =
+  "Hello Queen Makeovers,%0A%0A" +
+  "New Appointment Request%0A" +
+  "Name: " + encodeURIComponent(name) + "%0A" +
+  "Mobile: " + encodeURIComponent(phone) + "%0A" +
+  "Service: " + encodeURIComponent(service) + "%0A" +
+  "Date: " + encodeURIComponent(date) + "%0A" +
+  "Requirement: " + encodeURIComponent(message);
+
+  window.open(
+    "https://wa.me/917070970295?text=" + text,
+    "_blank"
+  );
+}
+
+</script>
+
+</body>
+</html>
