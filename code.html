@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WEB CREATORS - DIGITAL SOLUTIONS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#4d5b96",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-surface": "#2d3133",
+                    "surface-bright": "#f7f9fb",
+                    "outline-variant": "#c6c5d1",
+                    "secondary": "#006877",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary-container": "#2b1c00",
+                    "primary": "#00041f",
+                    "primary-fixed": "#dde1ff",
+                    "outline": "#767681",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7583c1",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-fixed": "#001f25",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed": "#ffdea9",
+                    "background": "#f7f9fb",
+                    "tertiary-fixed-dim": "#ffba27",
+                    "tertiary": "#0a0500",
+                    "on-tertiary-fixed-variant": "#5e4100",
+                    "on-surface-variant": "#454650",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#8debff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#35437c",
+                    "secondary-fixed": "#a3eeff",
+                    "on-tertiary-fixed": "#271900",
+                    "on-tertiary-container": "#b07d00",
+                    "on-primary-fixed": "#03154f",
+                    "on-secondary-container": "#006b7a",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#004e5a",
+                    "surface": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "secondary-fixed-dim": "#76d4e7",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-container": "#071952",
+                    "surface-container": "#eceef0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap-desktop": "120px",
+                    "section-gap-mobile": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "button": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-xl-mobile": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-xl": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "button": [
+                            "16px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-xl-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .btn-primary {
+            background-color: #FFB703;
+            color: #071952;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+        }
+        .btn-secondary {
+            border: 2px solid #071952;
+            color: #071952;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(7, 25, 82, 0.05);
+        }
+        .card-shadow {
+            box-shadow: 0px 10px 30px rgba(7, 25, 82, 0.05);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0px 15px 40px rgba(8, 131, 149, 0.15);
+            transform: translateY(-5px);
+        }
+        .icon-circle {
+            background-color: #088395;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #071952 0%, #088395 100%);
+        }
+        .input-field {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 12px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #088395;
+            box-shadow: 0 0 0 3px rgba(8, 131, 149, 0.2);
+        }
+        .ai-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(8, 131, 149, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header Component -->
+<header class="glass-nav flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto z-50 docked full-width top-0 sticky shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">WEB CREATORS DIGITAL SOLUTIONS</span>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#ai-solutions">AI Solutions</a><a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#packages">Packages</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="#order">Order Now</a>
+</div>
+<a class="btn-primary px-6 py-3 rounded-full font-button text-button scale-95 active:scale-90 transition-transform" href="#order">Get Quote</a>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-section-gap-mobile md:pb-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden bg-surface-container-low"><div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6 z-10">
+<div class="flex gap-2 items-center">
+<span class="inline-block px-4 py-2 bg-secondary-container/20 text-on-secondary-container font-label-md text-label-md rounded-full">Website Owner: Rahul</span>
+<span class="inline-block px-4 py-2 bg-primary/10 text-primary font-label-md text-label-md rounded-full flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="smart_toy">smart_toy</span> AI-Powered</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary">अपनी <span class="text-secondary">AI-Enhanced</span> Professional Website बनवाएँ</h1>
+<p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant">Business, Shop, Coaching, Portfolio और किसी भी काम के लिए Modern, Mobile-Friendly और AI के साथ आधुनिक Website.</p>
+<div class="pt-4 flex flex-wrap gap-4">
+<a class="btn-primary px-8 py-4 rounded-full font-button text-button flex items-center gap-2" href="#order">
+<span>🚀</span> Website बनवाएँ
+                        </a>
+<a class="btn-secondary px-8 py-4 rounded-full font-button text-button flex items-center gap-2" href="#contact">
+<span class="material-symbols-outlined" data-icon="phone">phone</span> Contact Us
+                        </a>
+</div>
+</div>
+<div class="relative z-10 hidden md:block">
+<div class="absolute -inset-4 bg-gradient-to-r from-secondary-fixed/50 to-primary-fixed/50 rounded-[32px] blur-xl opacity-50"></div>
+<div class="relative bg-surface rounded-[24px] border border-outline-variant p-2 card-shadow">
+<div class="w-full h-[400px] bg-surface-container-high rounded-[16px] overflow-hidden" data-alt="A modern, high-tech dashboard interface displayed on a sleek laptop screen, surrounded by floating geometric 3D abstract shapes representing digital transformation. The lighting is soft and bright, creating a clean light-mode aesthetic with vibrant teal and deep navy accents. The mood is professional, innovative, and reliable." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBT4li9ZzONtmOQse5BRvtMqgPMd0Y4mcg_rtIg0SSuYv1SM04vjSn-r3XuIbxoPdbc0Cr28t7VCsAYIfbOhp4sScAk2ia8TTX4St4QMu09vsdumqDX9RCdw-1IeBIKvQuT6-3uwi6M86p8URj_NFzT1bj31d05wdjSJIvcc3K6b0_LIoPnywmUDDCqyGIsY3-o3pKcLOtHk2O8wET6U-I4uW0GPR48W7AWEkygwygMCpZBgH0RLwRK')"></div>
+</div>
+</div>
+</div></section>
+<!-- AI Solutions Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface px-margin-mobile md:px-gutter relative overflow-hidden" id="ai-solutions">
+<div class="absolute inset-0 ai-pattern opacity-50"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary flex items-center justify-center gap-2"><span class="material-symbols-outlined text-secondary text-[36px]" data-icon="memory">memory</span> AI-Powered Solutions</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">AI के साथ आधुनिक वेबसाइट जो आपके business को तेज़ी से बढ़ाए</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div class="space-y-6">
+<div class="bg-surface-container-low p-6 rounded-[20px] border border-outline-variant card-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-secondary" data-icon="smart_toy">smart_toy</span> 24/7 AI Chatbots</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">ग्राहकों के सवालों का तुरंत जवाब देने के लिए intelligent chatbots.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[20px] border border-outline-variant card-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span> Smart Automation</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Leads और inquiries को automatically manage करने की सुविधा.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[20px] border border-outline-variant card-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span> Data Insights</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Website traffic और user behaviour को समझने के लिए AI analytics.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-[32px] blur-xl opacity-70"></div>
+<img alt="AI glowing neural network pattern illustrating artificial intelligence integration in digital business solutions" class="relative z-10 rounded-[24px] shadow-lg w-full object-cover h-[400px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA1W3n8NZBZzydEgQQcmFLZpbLqNuYH95d7L2XXdALnch360DXciksMrMOZSMXliuUzgPYrLSkXrE0SSi1NoBbzdKfCuy---MUAUu6TZ6FJkaxEtLUZxSp7PsYsydYW-kgJ8p66BwgHUF1fI_fO45mU4hXaFIaOnch_c0wFXzRSfCARs8aFP_xd81kTkdy-EwNqapRoaUHbJLzAPKosthIrSqHmc9xe__zD0cEi44hHBClNxdl6Po0"/>
+</div>
+</div>
+</div>
+</section><section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low px-margin-mobile md:px-gutter" id="portfolio"><div class="max-w-container-max mx-auto"><div class="text-center mb-16 space-y-4"><h2 class="font-headline-lg text-headline-lg text-primary">हमारा Portfolio</h2><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">हमारी बनाई हुई कुछ बेहतरीन वेबसाइट्स</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-surface rounded-[24px] overflow-hidden card-shadow border border-outline-variant flex flex-col"><div class="h-48 overflow-hidden"><img alt="Corporate Website" class="w-full h-full object-cover transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0jfUxiWc6I482KENfD8qZOd0vRsER7RN2mVoQUNS-UZsBt_ErhktatwI7cXSKXVWNOrH67dWFPYUANLY-uie98s6GjT0RLvk3XXq-FSoiPHUGRTzLgV1-XvvJuMAMDLPzJvrYIJ8m6xip6l3uuloWVdM9er2S84JDW5GIiowBjGIMz0Uyp3wAe2JcTY3tBlu7TB0VL8V-FBApEoXdj3BzmsrXl0rATeoTPhmytJySCMfxTlQv4_X1"/></div><div class="p-6"><h3 class="font-headline-md text-headline-md text-primary mb-2">Corporate Website</h3><p class="text-on-surface-variant font-body-md text-body-md">Professional business solution</p></div></div><div class="bg-surface rounded-[24px] overflow-hidden card-shadow border border-outline-variant flex flex-col"><div class="h-48 overflow-hidden"><img alt="E-commerce Store" class="w-full h-full object-cover transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4k0GXWA1VuHQTKk5gfewhBzqvRxUh1Yxlou0Xrw1KX3xyr0ay6rEFNadvbfNGsVuqayA_ms8Ff_I6t6e9BY3z34De1vtqNX7Nndlbf2UoGjpe0mO4CvnubiAuqK1Jh03Tw0TaT9ErlOhV977NdvYFbrK38lN6LP5mo62OIZYsb8a8gxKcG64TgQ5ZBsz7-cD32frfsikCFVUJyezzX--TlwGXT9BmEM8DVgDKZpI9B7urKfI6x4u9"/></div><div class="p-6"><h3 class="font-headline-md text-headline-md text-primary mb-2">E-commerce Store</h3><p class="text-on-surface-variant font-body-md text-body-md">Modern online shopping experience</p></div></div><div class="bg-surface rounded-[24px] overflow-hidden card-shadow border border-outline-variant flex flex-col"><div class="h-48 overflow-hidden"><img alt="Coaching Platform" class="w-full h-full object-cover transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1q7OvBVhz7LeLhXXxrPsziguHtNhKXxYBp4yyEuaOQeeFchVECS2uyrYCQQH0J9a7HFYaZubRS5kArNiRZ5xQZIOmYjT0KNt23b5kJ05BCSyyms5a6SbA8WcMr_6ivl7jXd01IuYV5D9j5PY1qTGmT2OfPvyUCSloR4ybfYotSnP7NCWCCTTLcraAFbNtLIFiFRY_bsVSxNqnWqQgtqnTC5zLqPSeVRzNbibF8AbvLFlicrC6ZgEC"/></div><div class="p-6"><h3 class="font-headline-md text-headline-md text-primary mb-2">Coaching Platform</h3><p class="text-on-surface-variant font-body-md text-body-md">Clean and effective landing page</p></div></div><div class="bg-surface rounded-[24px] overflow-hidden card-shadow border border-outline-variant flex flex-col"><div class="h-48 overflow-hidden"><img alt="SaaS Dashboard" class="w-full h-full object-cover transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgs7dhS6NXwpSVM1viWovLmS6tj5VBCLVaBiwdmpOZhnItddWuRet1oEzlT0G9O09nuJMq8-NNIH5MiDV8dk0lNxRI8ZUatA8nMf6k_a34UvCBahzL6xYwUofejYryKzz18t6I0iEHCSRosbHTDFtIqf2gyXshk19sGD38LjNBAujrbveiiKUk636EeHo2w_wTpUjPIgtzNrlE21nijm2DjHVDbI_uL0m-GFuy8gnzoRLWd8s-H0Nm"/></div><div class="p-6"><h3 class="font-headline-md text-headline-md text-primary mb-2">SaaS Dashboard</h3><p class="text-on-surface-variant font-body-md text-body-md">Modern analytics and data visualization</p></div></div><div class="bg-surface rounded-[24px] overflow-hidden card-shadow border border-outline-variant flex flex-col"><div class="h-48 overflow-hidden"><img alt="Luxury Real Estate" class="w-full h-full object-cover transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzn_1UXgfDDP35_9HXvI0FOWWEUbL7YvI-o2CPZVQUx3JdpvRxYKckEN0KxIuV8nR9qeZNqEnwEgZRflSP8gJKwNjtPj7NjUnCSwH3M5RIQUdadMLZWfyzBQgyA4qcs5ofQt3JSlY3XILh-rYLFek_eyTdmrWd0rSZLo7e_-yjwd7bIw6Y3fMXXJJLWtHigABmmp3kPjR-nwVFEueC6bcElVV8AXx5-MAfAY3F2h138EmWGfNNWEzp"/></div><div class="p-6"><h3 class="font-headline-md text-headline-md text-primary mb-2">Luxury Real Estate</h3><p class="text-on-surface-variant font-body-md text-body-md">Elegant property showcase platform</p></div></div></div></div></section>
+<!-- Services Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low px-margin-mobile md:px-gutter" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">हमारी Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">आपके business के लिए complete website solution</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant">
+<div class="w-12 h-12 icon-circle">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Business Website</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Professional online presence to showcase your company services and build trust with clients.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant">
+<div class="w-12 h-12 icon-circle">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Shop Website</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">E-commerce solutions to sell your products online with secure payment gateways integration.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant relative overflow-hidden">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary/10 rounded-full blur-xl"></div>
+<div class="w-12 h-12 bg-primary text-secondary-fixed rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary z-10">AI Automation</h3>
+<p class="text-on-surface-variant font-body-md text-body-md z-10">Intelligent chatbots and automated workflows to streamline your customer interactions.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant">
+<div class="w-12 h-12 icon-circle">
+<span class="material-symbols-outlined" data-icon="smartphone">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Mobile Website</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Fully responsive designs ensuring your site looks perfect on all devices, especially smartphones.</p>
+</div>
+<!-- Service 5 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant">
+<div class="w-12 h-12 icon-circle">
+<span class="material-symbols-outlined" data-icon="design_services">design_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Professional Design</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Modern aesthetics using the latest UI/UX principles tailored to your specific brand identity.</p>
+</div>
+<!-- Service 6 -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow flex flex-col items-start gap-4 border border-outline-variant">
+<div class="w-12 h-12 icon-circle">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Website Support</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Ongoing maintenance, security updates, and technical assistance to keep your site running smoothly.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="packages">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Website Packages</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">अपनी जरूरत के अनुसार package चुनें</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<!-- Basic -->
+<div class="bg-surface rounded-[24px] p-8 border border-outline-variant card-shadow flex flex-col relative overflow-hidden">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Basic</h3>
+<div class="text-4xl font-bold text-secondary mb-6">₹999</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Single Page Website</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Mobile Responsive</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Contact Form</span>
+</li>
+</ul>
+<a class="btn-secondary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Select Basic</a>
+</div>
+<!-- Standard -->
+<div class="gradient-bg rounded-[24px] p-8 card-shadow flex flex-col relative overflow-hidden transform md:-translate-y-4">
+<div class="absolute top-0 right-0 bg-tertiary-fixed-dim text-on-tertiary-fixed-variant text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Standard</h3>
+<div class="text-4xl font-bold text-tertiary-fixed-dim mb-6">₹1,999</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary font-body-md">Up to 5 Pages</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary font-body-md">Premium Design</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary font-body-md">WhatsApp Integration</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary font-body-md">Basic SEO Setup</span>
+</li>
+</ul>
+<a class="btn-primary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Select Standard</a>
+</div>
+<!-- Premium -->
+<div class="bg-surface rounded-[24px] p-8 border border-outline-variant card-shadow flex flex-col relative overflow-hidden">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Premium</h3>
+<div class="text-4xl font-bold text-secondary mb-6">₹3,999</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">E-commerce / Advanced Site</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Payment Gateway Setup</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Free Domain (1 Yr)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md">Admin Dashboard</span>
+</li>
+</ul>
+<a class="btn-secondary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Select Premium</a>
+</div>
+</div>
+</section><section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto bg-surface" id="ai-packages"><div class="text-center mb-16 space-y-4"><h2 class="font-headline-lg text-headline-lg text-primary flex items-center justify-center gap-2"><span class="material-symbols-outlined text-secondary text-[36px]" data-icon="smart_toy">smart_toy</span> AI के लिए विशेष पैकेज</h2><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">AI Pricing Packages - अपने व्यवसाय को स्मार्ट बनाएँ</p></div><div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"><div class="bg-surface-container-low rounded-[24px] p-8 border border-outline-variant card-shadow flex flex-col relative overflow-hidden"><h3 class="font-headline-md text-headline-md text-primary mb-2">AI Chatbot Starter</h3><div class="text-4xl font-bold text-secondary mb-6">₹2,999</div><ul class="space-y-4 mb-8 flex-grow"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">24/7 AI Chatbot</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">1000 Monthly Messages</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">Custom Knowledge Base</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">WhatsApp Integration</span></li></ul><a class="btn-secondary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Choose Plan</a></div><div class="gradient-bg rounded-[24px] p-8 card-shadow flex flex-col relative overflow-hidden transform md:-translate-y-4"><div class="absolute top-0 right-0 bg-tertiary-fixed-dim text-on-tertiary-fixed-variant text-xs font-bold px-3 py-1 rounded-bl-lg">BEST VALUE</div><h3 class="font-headline-md text-headline-md text-on-primary mb-2">AI Business Pro</h3><div class="text-4xl font-bold text-tertiary-fixed-dim mb-6">₹5,999</div><ul class="space-y-4 mb-8 flex-grow"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-primary font-body-md">Advanced Automation</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-primary font-body-md">Priority Support</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-primary font-body-md">5000 Monthly Messages</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-primary font-body-md">CRM Integration</span></li></ul><a class="btn-primary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Choose Plan</a></div><div class="bg-surface-container-low rounded-[24px] p-8 border border-outline-variant card-shadow flex flex-col relative overflow-hidden"><h3 class="font-headline-md text-headline-md text-primary mb-2">AI Enterprise</h3><div class="text-4xl font-bold text-secondary mb-6">Custom</div><ul class="space-y-4 mb-8 flex-grow"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">Full Workflow Automation</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">Dedicated Server</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">Unlimited Messages</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="text-on-surface-variant font-body-md">API Access</span></li></ul><a class="btn-secondary w-full py-3 rounded-full font-button text-button text-center block" href="#order">Contact Sales</a></div></div></section>
+<!-- Order & Payment Combined Section (Bento Grid Style) -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low px-margin-mobile md:px-gutter" id="order">
+<div class="max-w-container-max mx-auto">
+<div class="grid lg:grid-cols-12 gap-8">
+<!-- Order Form -->
+<div class="lg:col-span-7 bg-surface rounded-[24px] p-8 md:p-10 card-shadow">
+<div class="mb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">अपनी Website बनवाएँ</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">जानकारी भरकर WhatsApp पर भेजें</p>
+</div>
+<form class="space-y-6" id="orderForm">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="name">Name</label>
+<input class="input-field" id="name" placeholder="आपका नाम" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="mobile">Mobile Number</label>
+<input class="input-field" id="mobile" placeholder="10-digit number" type="tel"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="package">Package</label>
+<select class="input-field bg-white" id="package">
+<option value="">Select Package</option>
+<option value="Basic">Basic (₹999)</option>
+<option value="Standard">Standard (₹1,999)</option>
+<option value="Premium">Premium (₹3,999)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="type">Website Type</label>
+<select class="input-field bg-white" id="type">
+<option value="">Select Type</option>
+<option value="Business">Business</option>
+<option value="Shop">Shop / E-commerce</option>
+<option value="Portfolio">Portfolio / Resume</option>
+<option value="Coaching">Coaching / Education</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="details">Details</label>
+<textarea class="input-field" id="details" placeholder="Website के बारे में कुछ जानकारी दें..." rows="4"></textarea>
+</div>
+<button class="btn-primary w-full py-4 rounded-full font-button text-button flex items-center justify-center gap-2" onclick="sendWhatsAppOrder()" type="button">
+<span>📲</span> WhatsApp पर Order भेजें
+                            </button>
+</form>
+</div>
+<!-- Payment & Contact Column -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Payment Card -->
+<div class="gradient-bg rounded-[24px] p-8 md:p-10 card-shadow text-white relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-5 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-3 mb-6 relative z-10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[32px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h2 class="font-headline-md text-headline-md text-on-primary">💳 Payment</h2>
+</div>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-4 relative z-10">UPI से payment करें</p>
+<div class="bg-primary/40 rounded-xl p-4 mb-8 border border-white/10 relative z-10">
+<div class="text-sm text-primary-fixed-dim mb-1">UPI ID</div>
+<div class="font-headline-md text-headline-md font-bold tracking-wider select-all">7494005371@nyes</div>
+</div>
+<div class="space-y-4 relative z-10">
+<a class="w-full py-4 bg-white text-primary rounded-full font-button text-button flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95 text-center" href="upi://pay?pa=7494005371@nyes&amp;pn=WEB%20CREATORS&amp;cu=INR">
+<span>💳</span> Pay Now
+                                </a>
+<a class="w-full py-4 border border-white/30 text-white rounded-full font-button text-button flex items-center justify-center gap-2 transition-colors hover:bg-white/10 text-center" href="https://wa.me/917494005371?text=Hello%20Rahul%2C%20maine%20website%20payment%20kiya%20hai." target="_blank">
+<span>📲</span> Payment Confirmation
+                                </a>
+</div>
+</div>
+<!-- Contact Card -->
+<div class="bg-surface rounded-[24px] p-8 card-shadow border border-outline-variant" id="contact">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="support_agent">support_agent</span>
+<h2 class="font-headline-md text-headline-md text-primary">Contact Us</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<a class="btn-secondary py-3 rounded-xl font-label-md text-label-md flex flex-col items-center justify-center gap-2 text-center h-full" href="tel:7494005371">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span>📞 Call<br/>7494005371</span>
+</a>
+<a class="bg-[#25D366] text-white py-3 rounded-xl font-label-md text-label-md flex flex-col items-center justify-center gap-2 text-center h-full hover:bg-[#128C7E] transition-colors" href="https://wa.me/917494005371" target="_blank">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span>💬 WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-primary-fixed w-full px-margin-mobile md:px-gutter py-section-gap-mobile md:py-16 max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-8 full-width">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md text-secondary-fixed">WEB CREATORS DIGITAL SOLUTIONS</div>
+<p class="font-body-md text-body-md max-w-sm text-outline-variant">© 2024 WEB CREATORS DIGITAL SOLUTIONS. All rights reserved. Built for Digital Transformation.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 items-center">
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#services">Services</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#ai-solutions">AI Solutions</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#packages">Packages</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#order">Order Now</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#contact">Support</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#">Privacy Policy</a>
+</div>
+</footer>
+<script>
+        function sendWhatsAppOrder() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const pkg = document.getElementById('package').value;
+            const type = document.getElementById('type').value;
+            const details = document.getElementById('details').value;
+
+            if(!name || !mobile || !pkg) {
+                alert('कृपया Name, Mobile और Package की जानकारी भरें।');
+                return;
+            }
+
+            let text = `*New Website Order*\n\n`;
+            text += `*Name:* ${name}\n`;
+            text += `*Mobile:* ${mobile}\n`;
+            text += `*Package:* ${pkg}\n`;
+            if(type) text += `*Type:* ${type}\n`;
+            if(details) text += `*Details:* ${details}\n`;
+
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/917494005371?text=${encodedText}`, '_blank');
+        }
+    </script>
+</body></html>
