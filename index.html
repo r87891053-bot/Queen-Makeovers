@@ -1,0 +1,887 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WEB CREATORS - DIGITAL SOLUTIONS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#111827,#2563eb);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+}
+
+.logo span{
+    display:block;
+    font-size:11px;
+    letter-spacing:2px;
+    color:#dbeafe;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+/* HERO */
+.hero{
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    color:white;
+    background:
+      radial-gradient(circle at top left,#60a5fa,transparent 35%),
+      linear-gradient(135deg,#1d4ed8,#6d28d9);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 16px;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:12px;
+}
+
+.hero h2{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-white{
+    background:white;
+    color:#2563eb;
+}
+
+.btn-blue{
+    background:#2563eb;
+    color:white;
+}
+
+/* COMMON */
+section{
+    padding:65px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#6b7280;
+}
+
+/* SERVICES */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:30px 22px;
+    border-radius:18px;
+    box-shadow:0 6px 25px rgba(0,0,0,.07);
+    text-align:center;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:8px;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.about-text h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.about-list{
+    margin-top:20px;
+    list-style:none;
+}
+
+.about-list li{
+    margin:10px 0;
+}
+
+/* PRICING */
+.price-card{
+    max-width:520px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.1);
+}
+
+.price{
+    font-size:45px;
+    color:#16a34a;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.price-card li{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* PAYMENT */
+.payment-section{
+    background:#eef2ff;
+}
+
+.payment-box{
+    max-width:550px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.payment-amount{
+    font-size:42px;
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.upi{
+    margin:18px 0;
+    padding:15px;
+    background:#f3f4f6;
+    border-radius:10px;
+    font-weight:bold;
+    word-break:break-all;
+}
+
+.qr-placeholder{
+    width:210px;
+    height:210px;
+    margin:20px auto;
+    border:3px dashed #2563eb;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2563eb;
+    font-weight:bold;
+    padding:20px;
+}
+
+/* FORM */
+.contact-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    margin:7px 0;
+    border:1px solid #d1d5db;
+    border-radius:9px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:9px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+/* CONTACT */
+.contact-info{
+    text-align:center;
+    margin-top:25px;
+}
+
+.contact-info a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    margin:7px 0;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:1000;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-box{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:48px 15px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="navbar">
+
+    <div class="logo">
+        WEB CREATORS
+        <span>DIGITAL SOLUTIONS</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#payment">Payment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+
+    <div class="badge">
+        Professional Digital Solutions
+    </div>
+
+    <h1>WEB CREATORS</h1>
+
+    <h2>DIGITAL SOLUTIONS</h2>
+
+    <p>
+        We create professional, modern and mobile-friendly
+        websites for businesses, shops, companies and individuals.
+    </p>
+
+    <a href="#services" class="btn btn-white">
+        View Services
+    </a>
+
+    <a href="#contact" class="btn btn-white">
+        Get Started
+    </a>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Our Services</h2>
+    <p>Complete digital solutions for your business</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+    <div class="icon">🌐</div>
+    <h3>Business Website</h3>
+    <p>
+        Professional website for your business,
+        shop or company.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">📱</div>
+    <h3>Mobile Friendly Website</h3>
+    <p>
+        Website designed to work smoothly
+        on mobile phones and Chrome.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🛒</div>
+    <h3>Online Store</h3>
+    <p>
+        Create a modern online store for
+        your products and services.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">💼</div>
+    <h3>Portfolio Website</h3>
+    <p>
+        Showcase your work, skills,
+        business and achievements online.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">📢</div>
+    <h3>Digital Promotion</h3>
+    <p>
+        Build your online presence and
+        promote your business digitally.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">⚡</div>
+    <h3>Website Maintenance</h3>
+    <p>
+        Website updates, content changes
+        and maintenance services.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-box">
+
+<div class="about-text">
+
+<h2>Why Choose Us?</h2>
+
+<p>
+WEB CREATORS - DIGITAL SOLUTIONS provides
+professional website development and digital
+services at affordable prices.
+</p>
+
+<ul class="about-list">
+
+<li>✅ Mobile Friendly Design</li>
+<li>✅ Modern Professional Layout</li>
+<li>✅ Fast & Simple Website</li>
+<li>✅ Chrome Compatible</li>
+<li>✅ Business Support</li>
+<li>✅ Affordable Service</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🚀</div>
+
+<h3>Grow Your Business Online</h3>
+
+<p>
+Give your business a professional online identity
+with a modern website.
+</p>
+
+<br>
+
+<a href="#contact" class="btn btn-blue">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- PRICING -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Our Service Plan</h2>
+    <p>Start your digital journey today</p>
+</div>
+
+<div class="price-card">
+
+<h2>Website Service</h2>
+
+<div class="price">
+₹200
+</div>
+
+<p>Starting / Registration Charge</p>
+
+<ul>
+<li>✅ Website Consultation</li>
+<li>✅ Professional Design</li>
+<li>✅ Mobile Responsive</li>
+<li>✅ Chrome Compatible</li>
+<li>✅ Customer Support</li>
+</ul>
+
+<a href="#payment" class="btn btn-blue">
+Pay ₹200
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment-section" id="payment">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Secure Payment</h2>
+
+<p>
+Pay your ₹200 service charge using UPI
+</p>
+
+</div>
+
+<div class="payment-box">
+
+<h2>Payment Amount</h2>
+
+<div class="payment-amount">
+₹200
+</div>
+
+<p>UPI Payment</p>
+
+<!-- QR IMAGE -->
+<!--
+अगर आपकी QR image का नाम QR.jpg है,
+तो नीचे दिए code को uncomment करें:
+
+<img src="QR.jpg"
+     alt="UPI QR Code"
+     style="width:210px;height:210px;object-fit:contain;">
+-->
+
+<div class="qr-placeholder">
+    QR CODE<br>
+    ₹200<br>
+    UPI Payment
+</div>
+
+<div class="upi">
+
+UPI ID:<br>
+7494005371@nyes
+
+</div>
+
+<a
+href="upi://pay?pa=7494005371@nyes&pn=WEB%20CREATORS%20DIGITAL%20SOLUTIONS&am=200&cu=INR"
+class="btn btn-blue">
+
+Pay ₹200 via UPI
+
+</a>
+
+<p style="margin-top:15px;font-size:13px;color:#666;">
+Payment करने से पहले UPI ID जरूर check करें।
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Get In Touch</h2>
+
+<p>
+Tell us what type of website you need.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<input
+type="text"
+id="business"
+placeholder="Business / Company Name">
+
+<select id="service" required>
+
+<option value="">
+Select Your Service
+</option>
+
+<option>
+Business Website
+</option>
+
+<option>
+Portfolio Website
+</option>
+
+<option>
+Online Store
+</option>
+
+<option>
+Mobile Friendly Website
+</option>
+
+<option>
+Digital Promotion
+</option>
+
+<option>
+Website Maintenance
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+<textarea
+id="message"
+placeholder="Describe your requirement">
+</textarea>
+
+<button
+type="submit"
+class="submit">
+
+Send Requirement on WhatsApp
+
+</button>
+
+</form>
+
+<div class="contact-info">
+
+<p>
+<strong>Website Owner:</strong> Rahul
+</p>
+
+<p>
+<strong>Customer Support:</strong>
+<a href="tel:7494005371">
+7494005371
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<h3>
+WEB CREATORS - DIGITAL SOLUTIONS
+</h3>
+
+<p>
+Professional Website & Digital Services
+</p>
+
+<p>
+Owner: Rahul
+</p>
+
+<p>
+Customer Support:
+<a
+href="tel:7494005371"
+style="color:white;">
+7494005371
+</a>
+</p>
+
+<p>
+© 2026 WEB CREATORS - DIGITAL SOLUTIONS.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+<a
+class="whatsapp"
+href="https://wa.me/917494005371"
+target="_blank"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+<script>
+
+function sendWhatsApp(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const mobile =
+        document.getElementById("mobile").value;
+
+    const business =
+        document.getElementById("business").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const message =
+        document.getElementById("message").value;
+
+    const whatsappMessage =
+`WEB CREATORS - DIGITAL SOLUTIONS
+
+New Website Requirement
+
+Name: ${name}
+
+Mobile: ${mobile}
+
+Business / Company: ${business}
+
+Service: ${service}
+
+Requirement:
+${message}`;
+
+    const url =
+        "https://wa.me/917494005371?text="
+        + encodeURIComponent(whatsappMessage);
+
+    window.open(url,"_blank");
+}
+
+</script>
+
+</body>
+</html>
+```
